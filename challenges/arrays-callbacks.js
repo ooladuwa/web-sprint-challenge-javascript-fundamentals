@@ -34,11 +34,10 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-// const lowCaseAnimalNames = []
-//   zooAnimals.map((item) => { (`${this.animal_name.toLowerCase()}`);
-//   });
+const lowCaseAnimalNames = zooAnimals.map((item) =>  (`${item.animal_name}.toLowerCase()`
+));
 
-// console.log(lowCaseAnimalNames);
+console.log(lowCaseAnimalNames);
 
 
 /* Request 3: .filter() 
@@ -46,9 +45,10 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter(function(item){
-  if ("population" < 5) return `${item.animal_name}`;
-
+const lowPopulationAnimals = zooAnimals.filter((item) => {
+  if ("population" < 5) {
+    return `${item.animal_name}`;
+  }
 });
 console.log(lowPopulationAnimals);
 
@@ -80,11 +80,11 @@ function consume(a, b, cb){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-const add = (a, b, cb) => cb(a + b);
+const add = (a, b) => a + b;
 
-const multiply = (a, b, cb) => cb(a * b);
+const multiply = (a, b) => a * b;
 
-const greeting = (a, b, cb) => cb(`Hello ${a} ${b}, nice to meet you!`);
+const greeting = (a, b) => `Hello ${a} ${b}, nice to meet you!`;
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
