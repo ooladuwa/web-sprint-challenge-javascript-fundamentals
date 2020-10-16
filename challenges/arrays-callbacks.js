@@ -84,7 +84,9 @@ const add = (a, b, cb) => cb(a + b);
 
 const multiply = (a, b, cb) => cb(a * b);
 
-const greeting = (a, b, cb) => `Hello ${a} ${b}, nice to meet you!`;
+const greeting = (a, b, cb) => cb(`Hello ${a} ${b}, nice to meet you!`);
+
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
